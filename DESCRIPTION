@@ -1,6 +1,6 @@
 Package: vlda
 Type: Package
-Title: Visualization of Multidimensional Longitudinal Data
+Title: Visualization of multidimensional longitudinal data
 Version: 1.1.5
 Authors@R: c(person("Seongwon", "Ryu", email = "seongwon6154@gmail.com", role = c("aut", "cre")),
             person("Bohui", "Lee", email = "leebh@pusan.ac.kr", role = c("aut")),
@@ -11,8 +11,11 @@ Depends: R (>= 3.6.0)
 Imports: dplyr, ggrepel, ggplot2, ggiraph, ggsci
 Description: Visualization of multidimensional longitudinal data based on the projection method using the indicator matrix. A convenient wrapper for creating two different types(Long format and Wide format) of plots using a consistent calling scheme for this longitudinal data. It provides the ability to projection supplementary information (supplementary objects and variables) that can often occur in longitudinal data to graphs, as well as provides a new interactive implementation to perform the additional interpretation, so it is also useful for longitudinal data visuals analysis.
 License: MIT + file LICENSE
+URL: https://github.com/pnuwon/vlda
+BugReports: https://github.com/pnuwon/vlda/issues
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.0
 NeedsCompilation: yes
 Packaged: 2020-05-22 09:05:00 UTC; Ryu
+
