@@ -25,9 +25,9 @@
 #' @details
 #' The longitudinal data inevitably has the characteristic that supplementary data is added as follows: \cr
 #' 
-#' ● Outcome variables measured at additional time points, such as \eqn{T+1, T+2, ...} after the last time point \eqn{T}. \cr
-#' ● New objects that are not previously measured.\cr
-#' ● Other covariates that indicate the characteristics of objects.\cr
+#' * Outcome variables measured at additional time points, such as \eqn{T+1, T+2, ...} after the last time point \eqn{T}. \cr
+#' * New objects that are not previously measured.\cr
+#' * Other covariates that indicate the characteristics of objects.\cr
 #' 
 #' Find coordinates representing objects and variables that are added in the VLDA plot already
 #' provided, through a method obtain that find coordinates on low-dimensional space for supplementary elements.
@@ -63,10 +63,12 @@
 #' data(Depression)
 #' fit2 <- vlda(x = Depression, object = "Case", time = c("1week", "2weeks", "4weeks"), type = "wide")
 #'
-#' data(Depression_column) # Response after 6 weeks and gender were added the columns for 800 existing patients.
+#' # Response after 6 weeks and gender were added the columns for 800 existing patients.
+#' data(Depression_column) 
 #' Depression_column <- as.matrix(Depression_column)
-#'
-#' data(Depression_row) # 100 patients who took placebo in each group of mild and severe were added to the rows.
+#' 
+#' # 100 patients who took placebo in each group of mild and severe were added to the rows.
+#' data(Depression_row) 
 #' Depression_row <- as.matrix(Depression_row)
 #'
 #'
