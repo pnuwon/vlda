@@ -2,7 +2,7 @@
 % Please edit documentation in R/vlda_plot.R
 \name{vlda_plot}
 \alias{vlda_plot}
-\title{Visualization (VLDA Plot)}
+\title{VLDA Plot}
 \usage{
 vlda_plot(fit, rename = NULL, interactive = TRUE,
           title = NULL, title.col = NULL, title.size = 15, title.hjust = 0,
@@ -73,17 +73,10 @@ vlda_plot(fit, rename = NULL, interactive = TRUE,
    \item{graphics}{As a result of vlda, it creates a two-dimensional graph. provides interactive graphics, so when the mouse cursor points to the observation coordinates, it provides a tooltip that displays observations of having the same coordinates and displays the row and column coordinate. In the case of long-form, the tooltip displays a time point, besides, coordinate having the same time point are filled with the yellow color on the graph, to make it easier to distinguish the same time points of observations with colors. In the case of a wide form, the combinations that the explanatory variables can have are grouped and the coordinates points of the corresponding observations are shown in yellow on the graph. changes in time points are indicated by orange arrows on the graph.}
 }
 \description{
-vlda_plot() is a convenient wrapper, for creating two different types(Long form and Wide form) of plots using a consistent calling scheme for the fitting model. (E.g. vlda or vlda_add).
+Assists in producing a plot that more effectively expresses changes over time for two different types(Long format and Wide format) using a consistent calling scheme for longitudinal data. It provides the ability to projection supplementary information (supplementary objects and variables) that can often occur in longitudinal data to graphs, as well as provides a new interactive implementation to perform the additional interpretation, so it is also useful for longitudinal data visuals analysis.
 }
 \details{
-The distance between two coordinates can be used to identify the relative relation between two categories.
-Also, by using the indicator matrix with objects information, so that the relations between categories and objects,
-and the clustering of objects can also be possible. Furthermore, we provide visual elements by projection new supplementary
- objects and variables that can often occur in longitudinal data into graphs. Finally, By providing a two-dimensional graph
- and interactive graphic elements, supports visualization techniques that can display more effectively represent changes
- over time in multidimensional longitudinal data. The \code{vlda plot} is based on packages \code{\link[=ggplot2]{ggplot()}}
- and \code{\link[=ggiraph]{ggiraph()}} is a convenient wrapper, for creating two different types(Long form and Wide form) of
- plots using a consistent calling scheme for the fitting model. (E.g. vlda or vlda_add).
+Coordinates in opposite directions on each axis can be considered to be different groups. And if the distance between the coordinates is close, it indicates that the group has a similar tendency. Even if the explanatory variable is not significant, a small tendency can confirm because the coordinate is placed in consideration of the relative influence.
 }
 \examples{
 ### Long form ###

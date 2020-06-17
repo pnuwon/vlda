@@ -12,16 +12,15 @@
 ## Resubmission
 This is a resubmission. In this version I have:
 
-* Removed phrases like 'This is an R package' in the DESCRIPTION file
+* Added a reference to the method used in the package. But I haven't been online yet, so I added the url.
+The dissertation for the degree of Doctor of Philosophy (see <http://lib.pusan.ac.kr/resource/e-article/?app=eds&mod=detail&record_id=edsker.000004649097&db_id=edsker> for more information)
 
-* Add URL and BugReports in DESCRIPTION file
-
-* Converted the GPL-2 LICENSE to MIT LICENSE
+* Removed the phrase "This package" from the comment field.
 
 I would be appreciated if you check my resubmission.
 Thank you for your consideration!
 
-
+## Original mail
 Thanks,
 
 Please do not start your description field in the DESCRIPTION file with
@@ -32,5 +31,5 @@ Please fix and resubmit, and document what was changed in the submission
 comments.
 
 Best,
-Jelena Saf
 
+Jelena Saf

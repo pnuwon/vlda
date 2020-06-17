@@ -25,11 +25,13 @@ and if it is not an indicator matrix, you can use it after generate an indicator
 Add objects or variables with new information to the two-dimensional VLDA plot proposed for multidimensional longitudinal data.
 }
 \details{
-The longitudinal data inevitably has the characteristic that supplementary data is added.
-Supplement data is outcome variables measured at additional time points, such as  after the last time point ,
-or new objects not previously measured, can be added to the row in the long form.
-And in addition to the previously given covariates, other variables that characteristics of the object can be added
-to the columns. Therefore, find coordinates representing objects and variables that are added in the VLDA plot already
+The longitudinal data inevitably has the characteristic that supplementary data is added as follows: \cr
+
+● Outcome variables measured at additional time points, such as \eqn{T+1, T+2, ...} after the last time point \eqn{T}. \cr
+● New objects that are not previously measured.\cr
+● Other covariates that indicate the characteristics of objects.\cr
+
+Find coordinates representing objects and variables that are added in the VLDA plot already
 provided, through a method obtain that find coordinates on low-dimensional space for supplementary elements.
 }
 \examples{
@@ -42,22 +44,13 @@ PTSD[,5] <-  ifelse(PTSD[,5] >= 6 , 1, 0)
 PTSD <- data.frame(lapply(PTSD, function(x) as.factor(x)))
 fit <- vlda(x = PTSD, object = "subject", time = "time", type = "long")
 
-## Column indicator matrix added ##
-# The degree of drinking that may affect PTSD
-data(PTSD_column)
+data(PTSD_column) # The degree of drinking that may affect PTSD
 PTSD_column <- as.matrix(PTSD_column)
-vlda_add(fit, add.col = PTSD_column )
 
-
-## Row indicator matrix added ##
-# Added to the row, and is intended for 316 patients after 18 months.
-# (The value of the time variables is zero vector)
-data(PTSD_row)
+data(PTSD_row) # Added to the row, and is intended for 316 patients after 18 months.
 PTSD_row <- as.matrix(PTSD_row)
-vlda_add(fit, add.row = PTSD_row)
 
 
-## Row and Column added ##
 vlda_add(
 fit,
 add.row = PTSD_row,
@@ -69,19 +62,13 @@ add.col = PTSD_column
 data(Depression)
 fit2 <- vlda(x = Depression, object = "Case", time = c("1week", "2weeks", "4weeks"), type = "wide")
 
-## Column indicator matrix added ##
-# Response after 6 weeks and gender were added the columns for 800 existing patients.
-data(Depression_column)
+data(Depression_column) # Response after 6 weeks and gender were added the columns for 800 existing patients.
 Depression_column <- as.matrix(Depression_column)
 
-## Row indicator matrix added ##
-# 100 patients who took placebo in each group of mild and severe were added to the rows.
-# (The value of the drug dummy variable is zero vector)
-data(Depression_row)
+data(Depression_row) # 100 patients who took placebo in each group of mild and severe were added to the rows.
 Depression_row <- as.matrix(Depression_row)
 
 
-## Row and Column added ##
 vlda_add(
 fit2,
 time.name = "6weeks",

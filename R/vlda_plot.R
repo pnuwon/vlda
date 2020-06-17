@@ -1,17 +1,10 @@
-#' Visualization (VLDA Plot)
+#' VLDA Plot
 #'
 #'
-#' vlda_plot() is a convenient wrapper, for creating two different types(Long form and Wide form) of plots using a consistent calling scheme for the fitting model. (E.g. vlda or vlda_add).
-#'
-#'
-#' The distance between two coordinates can be used to identify the relative relation between two categories.
-#' Also, by using the indicator matrix with objects information, so that the relations between categories and objects,
-#' and the clustering of objects can also be possible. Furthermore, we provide visual elements by projection new supplementary
-#'  objects and variables that can often occur in longitudinal data into graphs. Finally, By providing a two-dimensional graph
-#'  and interactive graphic elements, supports visualization techniques that can display more effectively represent changes
-#'  over time in multidimensional longitudinal data. The \code{vlda plot} is based on packages \code{\link[=ggplot2]{ggplot()}}
-#'  and \code{\link[=ggiraph]{ggiraph()}} is a convenient wrapper, for creating two different types(Long form and Wide form) of
-#'  plots using a consistent calling scheme for the fitting model. (E.g. vlda or vlda_add).
+#' Assists in producing a plot that more effectively expresses changes over time for two different types(Long format and Wide format) using a consistent calling scheme for longitudinal data. It provides the ability to projection supplementary information (supplementary objects and variables) that can often occur in longitudinal data to graphs, as well as provides a new interactive implementation to perform the additional interpretation, so it is also useful for longitudinal data visuals analysis.
+#' 
+#' 
+#' Coordinates in opposite directions on each axis can be considered to be different groups. And if the distance between the coordinates is close, it indicates that the group has a similar tendency. Even if the explanatory variable is not significant, a small tendency can confirm because the coordinate is placed in consideration of the relative influence.
 #'
 #' @param fit An object returned by \code{vlda()} or \code{supplement()}
 #' @param rename Rename a variable to another name
@@ -385,22 +378,7 @@ vlda_plot = function(fit, rename = NULL, interactive = TRUE,
 
   }
 
-  out <- list()
-  if(is.null(Ags)){
-    out <- list(graphics = viewer,
-                obs.coordinate = p[,c(1:3)],
-                var.coordinate = V[,1:2],
-                Eigen = Eigen,
-                GOF = GOF)
-  } else {
-    out <- list(graphics = viewer,
-                obs.coordinate = p[,c(1:3)],
-                sup.coordinate = Ags[,1:3],
-                var.coordinate = V[,1:2],
-                Eigen = Eigen, GOF = GOF)
-  }
-
-  return(out)
+  return(viewer)
 
 }
 
