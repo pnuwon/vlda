@@ -13,7 +13,7 @@ vlda_add(fit, add.col = NULL, add.row = NULL, time.name = NULL)
 
 \item{add.row}{A data matirx, The type of indicator matrix. Additional data sets in row format.
 Supplemental data should have the same variable name as \code{fit$ind.mat} returned by \code{\link{vlda}},
-and if it is not an indicator matrix, you can use it after generate an indicator matrix using \code{\link{indicator}} built into vlda.}
+and if it is not an indicator matrix, you can use it after generate an indicator matrix using \code{\link{indicator}} function built into vlda.}
 
 \item{time.name}{If supplemental data to add contains a time variable, it requires argument a character string that specifies the name of the time variable.}
 }
@@ -25,7 +25,7 @@ and if it is not an indicator matrix, you can use it after generate an indicator
 Add objects or variables with new information to the two-dimensional VLDA plot proposed for multidimensional longitudinal data.
 }
 \details{
-The longitudinal data inevitably has the characteristic that supplementary data is added as follows: \cr
+The longitudinal data inevitably has the characteristic that supplementary data is added such as: \cr
 
 * Outcome variables measured at additional time points, such as \eqn{T+1, T+2, ...} after the last time point \eqn{T}. \cr
 * New objects that are not previously measured.\cr
