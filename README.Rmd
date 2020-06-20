@@ -1,5 +1,7 @@
 ---
 title: vlda
+author: "Seongwon Ryu"
+date: "20 June 2020"
 output: html_document
 always_allow_html: yes
 ---
@@ -91,7 +93,7 @@ As shown in Figure 4.1, it shows that control.0, problem.1, stress.1, cohesion.0
 
 Next, we can consider supplementary data, the longitudinal data inevitably has the characteristic that supplementary data is added. PTSD_row is control, problems, stress, cohesion, and ptsd can add as the rows, for 316 patients after 18 months. and PTSD_column is the degree of drinking (Low, High) that may affect PTSD, can add to the columns correspond first to third time point for 316 patients. 
 
-```{r}
+```{r supplement_long}
 data(PTSD_row)
 data(PTSD_column)
 str(PTSD_row)
@@ -146,7 +148,7 @@ Depression[600, ]
  In the case of long-form, coordinate having the same time point are filled with the yellow color on the graph, to make it easier to distinguish the patients at the same time points with colors. However, in the case of wide form, when the mouse over the observation coordinate points, the graph shows the hover effect in which the coordinate points of observations with the same covariate are displayed in yellow points on the graph. For example, observations with a covariate of Diagnosis.1 and Drug.1 appear as the graph in the upper left. In this graph, the observations on the right side of the first axis appear abnormal for all three time points, and the more they go to the left, the more normal they appear. Conversely, observations with covariates Diagnosis.2 and Drug.2 appears in the graph in the lower right, the observations on the left side of the first axis appear normal for all three time point, and the more they go to the right, the abnormal more appear. That is, It is possible to visually check how much observation points according to the covariate, are close to response variables. 
 Next, we can consider applying to the additional measured objects and variables to Depression data. In Depression_row data supplementary objects represent 100 patients taking placebo instead of standard and new drugs in each mild and severe group. These supplementary objects are added as rows to depression data. Depression_column data consists of the response at the fourth time point (after 6 weeks) to 800 patients and the gender that can affect depression. This data is added as columns to depression data.
 
-```{r}
+```{r supplement_wide}
 Depression_row <- as.matrix(Depression_row)
 Depression_column <- as.matrix(Depression_column)
 wide.fit2 <- vlda_add(wide.fit, time.name = "6weeks", add.row = Depression_row, add.col = Depression_column)
