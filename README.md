@@ -1,2 +1,25 @@
+
 # vlda
-Assists in producing a plot that more effectively expresses changes over time for two different types(Long format and Wide format) using a consistent calling scheme for longitudinal data. It provides the ability to projection supplementary information (supplementary objects and variables) that can often occur in longitudinal data to graphs, as well as provides a new interactive implementation to perform the additional interpretation, so it is also useful for longitudinal data visuals analysis.  (see <http://lib.pusan.ac.kr/resource/e-article/?app=eds&mod=detail&record_id=edsker.000004649097&db_id=edsker> for more information).
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of vlda is to ...
+
+## Installation
+
+You can install the released version of vlda from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("vlda")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+``` r
+library(vlda)
+## basic example code
+```
+
