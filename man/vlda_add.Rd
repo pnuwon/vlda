@@ -19,7 +19,7 @@ and if it is not an indicator matrix, you can use it after generate an indicator
 }
 \value{
 \item{...}{Same as the result of vlda}
-\item{sup.coordiante}{A tibble data class, coordinates of new objects created when adding supplementary data in the vlda plot already provided.}
+\item{sup.coordiante}{A tibble data class. The coordinates of the new object created when adding supplemental data to the already provided vlda plot.}
 }
 \description{
 Add objects or variables with new information to the two-dimensional VLDA plot proposed for multidimensional longitudinal data.

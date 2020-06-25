@@ -15,21 +15,31 @@ This is a resubmission. In this version I have:
 * Added a reference to the method used in the package. But I haven't been online yet, so I added the url.
 The dissertation for the degree of Doctor of Philosophy (see <http://lib.pusan.ac.kr/resource/e-article/?app=eds&mod=detail&record_id=edsker.000004649097&db_id=edsker> for more information)
 
-* Removed the phrase "This package" from the comment field.
+* Fixed the description text of the description file.
 
 I would be appreciated if you check my resubmission.
 Thank you for your consideration!
 
 ## Original mail
-Thanks,
+Thanks, please correct in your Description text:
 
-Please do not start your description field in the DESCRIPTION file with
-phrases like 'This is a R package', 'This package', the package name,
-the package title or similar.
+types(Long
+-->
+types (long
 
-Please fix and resubmit, and document what was changed in the submission
-comments.
+Long format
+-->
+long format
+
+Wide format
+-->
+wide format
+
+analysis.
+-->
+analysis
+
+Please fix and resubmit.
 
 Best,
-
-Jelena Saf
+Swetlana Herbrandt

@@ -20,7 +20,7 @@
 #'
 #' @return
 #' \item{...}{Same as the result of vlda}
-#' \item{sup.coordiante}{A tibble data class, coordinates of new objects created when adding supplementary data in the vlda plot already provided.}
+#' \item{sup.coordiante}{A tibble data class. The coordinates of the new object created when adding supplemental data to the already provided vlda plot.}
 #'
 #' @details
 #' The longitudinal data inevitably has the characteristic that supplementary data is added such as: \cr
